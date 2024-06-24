@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { insertUser, getUsers } from '../../src/repositories/user';
+import { insertUser, getUsers } from '../../src/repositories/user.repository';
 import { describe, expect, test, beforeEach, afterEach } from '@jest/globals';
 
 const prisma = new PrismaClient();

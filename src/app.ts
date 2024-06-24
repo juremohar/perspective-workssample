@@ -2,7 +2,7 @@ import express, { Express } from 'express';
 import * as dotenv from 'dotenv';
 import cors from 'cors';
 
-import { routes as userRoutes } from './routes/user';
+import { routes as userRoutes } from './routes/user.route';
 
 dotenv.config();
 const app: Express = express();

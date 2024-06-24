@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import { validateUserCreation, validateGetUsers } from '../validators/user';
+import { validateUserCreation, validateGetUsers } from '../validators/user.validator';
 import { CreateUser, GetUsersParams } from '../models/user';
-import { insertUser, getUsers as fetchUsers } from '../repositories/user';
+import { insertUser, getUsers as fetchUsers } from '../repositories/user.repository';
 
 export const getUsers = async (req: Request, res: Response): Promise<Response> => {
     // Depending on the use case we could add some caching here (eg. Redis)

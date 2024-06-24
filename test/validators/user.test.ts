@@ -1,5 +1,5 @@
 import { PrismaClient, Country } from '@prisma/client';
-import { validateUserCreation, validateGetUsers } from '../../src/validators/user';
+import { validateUserCreation, validateGetUsers } from '../../src/validators/user.validator';
 import { CreateUser } from '../../src/models/user';
 import { describe, expect, test, jest, beforeEach, beforeAll } from '@jest/globals';
 

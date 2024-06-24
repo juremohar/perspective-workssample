@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { createUser, getUsers } from '../controllers/user';
+import { createUser, getUsers } from '../controllers/user.controller';
 export const routes = express.Router();
 
 // If any special middlewares (authorization, rate limiter, permissions, ...) need to be added, they can be added here.
