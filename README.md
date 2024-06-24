@@ -4,10 +4,10 @@ This project skeleton contains a basic Express setup one endpoint to create a us
 I have used the prisma ORM for database managament. 
 
 ## Scripts 
-`npm start` starts the server
-`npm run migrate` creates and initiliaze database to the latest version
-`npm run seed` seeds the database with dummy data
-`npm test` executes the tests
+- `npm start` starts the server
+- `npm run migrate` creates and initiliaze database to the latest version
+- `npm run seed` seeds the database with dummy data
+- `npm test` executes the tests
 
 
 ## Usage
