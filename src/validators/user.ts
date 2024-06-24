@@ -11,9 +11,7 @@ const createUserSchema = Joi.object({
 });
 
 const getUsersSchema = Joi.object({
-    sort: Joi.string()
-        .pattern(/^[-+]?created$/)
-        .optional(),
+    sort: Joi.string().valid('createdAt', '-createdAt').optional(),
 });
 
 export const validateUserCreation = async (data: CreateUser) => {
@@ -27,5 +25,5 @@ export const validateUserCreation = async (data: CreateUser) => {
 };
 
 export const validateGetUsers = async (data: object) => {
-    await getUsersSchema.validate(data, { abortEarly: false });
+    await getUsersSchema.validateAsync(data);
 };

@@ -4,7 +4,7 @@ import { SortCriteria } from '../models/common';
 
 const prisma = new PrismaClient();
 
-export const insertUser = async (data: CreateUser) => {
+export const insertUser = async (data: CreateUser): Promise<User> => {
     try {
         return await prisma.user.create({
             data: data,

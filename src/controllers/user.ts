@@ -7,13 +7,13 @@ export const getUsers = async (req: Request, res: Response): Promise<Response> =
     // Depending on the use case we could add some caching here (eg. Redis)
     try {
         const queryParams: GetUsersParams = req.query;
-        validateGetUsers(queryParams);
+        await validateGetUsers(queryParams);
         const users = await fetchUsers(queryParams);
         return res.status(200).json({ users });
     } catch (error) {
         // We could add some external log of the error here, so we could solve it easier later on:
         // eg. Grafana for dashboard, Sentry/Sumologic for log collections
-        return res.status(500).json({ error: 'Failed to retrieve users' });
+        return res.status(400).json({ error: 'Failed to retrieve users' });
     }
 };
 
