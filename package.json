@@ -6,6 +6,7 @@
   "scripts": {
     "start": "ts-node index.ts",
     "test": "set DEBUG=* && jest --testPathPattern=test --coverage",
+    "migrate": "npx prisma migrate deploy",
     "seed": "ts-node --transpile-only prisma/seed.ts"
   },
   "prisma": {
